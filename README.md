@@ -26,7 +26,8 @@ b_img_rgb batch shape: torch.Size([8, 3, 224, 224])
 train_labels batch shape: torch.Size([8])
 ## 4.1. Implementation of data preparation and enhancement
 Data set overview: The data set used comes from kaggle's plant seedling classification competition and contains 4750 multi-category images. To unify the model input, the resolution of all images was adjusted to 224x224 pixels. The data set is divided into a training set of 4000 images and a validation set of 750 images.
-## 4.2.Data enhancement: In order to improve the model generalization ability, a series of preprocessing and data enhancement operations were performed using the PyTorch framework, including random rotation (±5 degrees), random horizontal flipping, and normalization of the image[10].
+## 4.2.Data enhancement
+In order to improve the model generalization ability, a series of preprocessing and data enhancement operations were performed using the PyTorch framework, including random rotation (±5 degrees), random horizontal flipping, and normalization of the image[10].
 Data loading: Use PyTorch's DataLoader class to batch load and randomly shuffle the order of images. The batch size is set to 8 and the images are organized into tensors of shape [8, 3, 224, 224].
 ## 4.3. Data partitioning and standardization
 Randomly divided 80% of the training set and 20% of the test set, and used DataLoader for batch processing to improve training efficiency.
